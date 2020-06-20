@@ -1,0 +1,99 @@
+.about {
+    @include flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 50px;
+    
+    @media screen and (min-width: 992px) {
+        flex-wrap: nowrap;
+        padding: 70px 0;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    &--reverse{
+        flex-direction: row-reverse;
+    }
+
+    &__img-wrap {
+        flex: 1 0 100%;
+
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            flex-basis: 55%;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+
+        @media screen and (min-width: 768px) {
+            box-shadow: 0px -30px 3px 10px #55b7ff;
+        }
+        @media screen and (min-width: 992px) {
+            box-shadow: -100px -50px #55b7ff;
+        }
+        @media screen and (min-width: 1280px) {
+            box-shadow: -215px -70px #55b7ff;
+        }
+        &--shadow-right {
+            @media screen and (min-width: 768px) {
+                box-shadow: 0px 30px 3px 10px #7e5aff;
+            }
+            @media screen and (min-width: 992px) {
+                box-shadow: 100px -50px #7e5aff;
+            }
+            @media screen and (min-width: 1280px) {
+                box-shadow: 215px -70px #7e5aff;
+            }
+        }
+    }
+
+    &__description {
+        flex: 1 0 100%;
+        margin-top: 50px;
+
+        @media screen and (min-width: 992px) {
+            flex-basis: 45%;
+            padding: 30px;
+            margin-top: 0;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    &__title, &__text, &__btn {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        overflow: hidden;
+        max-height: 175px;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+
+        @media screen and (min-width: 576px) and (max-width: 992px) {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__address-link {
+        display: block;
+        color: $title-color;
+        @include tr;
+        @include hover {
+            color: $primary-color;
+        }
+    }
+
+    &__address {
+        display: inline-block;
+    }
+}

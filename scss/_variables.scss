@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+@font-face {
+	font-family: 'GothamBook';
+	src: url('../fonts/GothamBook/GothamBook.eot') format('eot');
+    src: local('GothamBook'), 
+         url('../fonts/GothamBook/GothamBook.woff2') format('woff2'),
+         url('../fonts/GothamBook/GothamBook.woff') format('woff'), 
+         url('../fonts/GothamBook/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../fonts/GothamBold/GothamBold.eot') format('eot');
+    src: local('GothamBold'),
+         url('../fonts/GothamBold/GothamBold.woff2') format('woff2'), 
+         url('../fonts/GothamBold/GothamBold.woff') format('woff'), 
+         url('../fonts/GothamBold/GothamBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamMediumRegular';
+	src: url('../fonts/GothamMediumRegular/GothamMediumRegular.eot') format('eot');
+    src: local('GothamMediumRegular'), 
+         url('../fonts/GothamMediumRegular/GothamMediumRegular.woff2') format('woff2'),
+         url('../fonts/GothamMediumRegular/GothamMediumRegular.woff') format('woff'), 
+         url('../fonts/GothamMediumRegular/GothamMediumRegular.ttf') format('truetype');
+}
+
+$body-ff       : 'Open Sans', sans-serif;
+$title-ff      : GothamBold, sans-serif;
+$subtitle-ff   : GothamBook, sans-serif;
+$btn-ff        : GothamBook, sans-serif;
+$title-line-ff : GothamMediumRegular, sans-serif;
+
+$secondary-color       : #fff;
+$body-color            : #4b5562;
+$title-color           : #2c4058;
+$primary-color         : #55b7ff;
+$btn-color             : #2c4058;
+$contact-primary-color : #7e5aff;
+
+$body-bg   : $secondary-color;
+$section-bg: $primary-color;
+$btn-bg    : $secondary-color;
+
+$border-width: 1px;
+
+$gradient: linear-gradient( 45deg, rgba(85,183,255, .9) 0%, rgba(126,90,255, .9) 100%);
+
+
+
+// $dark-gray: #666666;
+// $medium-gray: #898f8f;
+// $light-gray: #cccccc;

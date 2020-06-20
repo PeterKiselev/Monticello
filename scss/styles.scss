@@ -1,0 +1,227 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'socials';
+@import 'header';
+
+* { box-sizing: border-box; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+p { margin: 0; }
+img { object-fit: cover; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1;}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    @include font($body-ff, 1.8rem, $body-color);
+    background-color: $body-bg;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+#arrowTop {
+    height: $social-size * 1.5;
+    width: $social-size * 1.5;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 50%;
+    font-size: 1.5em;
+    border: $border-width * 2 solid $primary-color;
+    text-align: center;
+    line-height: ($social-size * 1.5) - 2 * ($border-width * 2);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 5;
+
+    @include tr;
+    @include hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+.logo {
+    position: relative;
+    z-index: 10;
+    & svg {
+        fill: $secondary-color;
+        @include tr;
+    }
+    @include hover {
+        svg {
+            fill: $primary-color;
+            stroke: $body-color;
+            stroke-width: 2px;
+            stroke-dasharray: 1;
+        }
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    @include font($title-ff, 3.5rem, $title-color, null, null);
+    position: relative;
+    max-height: 90px;
+    overflow: hidden;
+    @include clamp;
+
+    @media screen and (min-width: 768px) {
+        font-size: 4.4rem;
+    }
+
+    &:before {
+        content: '';
+        background-color: $title-color;
+    }
+
+    &--main {
+        color: inherit;
+        letter-spacing: .05em;
+        margin-bottom: 35px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 6rem;
+            max-height: 120px;
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 8rem;
+            max-height: 160px;
+        }
+    }
+
+    &--line {
+        font-family: $title-line-ff;
+        padding-top: 40px;
+        max-height: 130px;
+        &:before {
+            content: '';
+            @include posA(0, $left: 50%);
+            display: inline-block;
+            width: 2.5em;
+            height: $border-width * 2;
+            @include transform;
+            background-color: $title-color;
+        }
+    }
+
+    &--white {
+        color: $secondary-color;
+        &:before {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+.subtitle {
+    @include font($subtitle-ff, $fc: $title-color, $lh: 1.2);
+    text-transform: uppercase;
+    
+    &--main {
+        color: inherit;
+        letter-spacing: .3em;
+        max-height: 65px;
+        overflow: hidden;
+        @include clamp($clamp: 3);
+    }
+}
+
+.btn {
+    @include flex($df: inline-flex, $jc: center);
+    @include font($ff: $btn-ff, $fz: 1.4rem, $fc: $btn-color, $lh: 1);
+    max-width: 190px;
+    width: 100%;
+    min-height: 50px;
+    background-color: $btn-bg;
+    border: $border-width solid $title-color;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include tr;
+
+    @include hover {
+        color: $secondary-color;
+        background-color: rgba($primary-color, .7);
+        border-color: $primary-color;
+        box-shadow: inset 0 0 0 1px $primary-color;
+    }
+}
+
+.picture {
+    @include posA(0, 0, 0, 0);
+    z-index: 4;
+
+    &:before {
+        content: '';
+        @include posA(0,0,0,0);
+        z-index: 4;
+        background: $gradient;
+    }
+
+    img {
+        @include full;
+    }
+}
+
+.section {
+    min-height: 100vh;
+    padding: 50px 0;
+    @include flex($jc: center);
+
+    @media screen and (min-width: 992px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &--bg {
+        will-change: transform;
+        background-color: $section-bg;
+        background-position: center bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+
+        @media screen and (min-width: 992px) {
+            margin-bottom: 100px;
+        }
+    }
+
+    // &__content {
+    //     position: relative;
+    //     z-index: 4;
+    //     width: 100%;
+    // }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+@import 'cover';
+@import 'about';
+@import 'news';
+@import 'projects';
+@import 'footer';

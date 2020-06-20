@@ -1,0 +1,183 @@
+.section {
+    &--news {
+        background-image: linear-gradient( 45deg, rgba(60,127,212, .91) 0%, rgba(36,204,250, .91) 100%), url(../img/news.jpg);
+        @media screen and (max-width: 1024px) {
+            background-image: linear-gradient( 45deg, rgba(60,127,212, .91) 0%, rgba(36,204,250, .91) 100%), url(https://picsum.photos/1280/720);
+        }
+        @media screen and (max-width: 768px) {
+            background-image: linear-gradient( 45deg, rgba(60,127,212, .91) 0%, rgba(36,204,250, .91) 100%), url(https://picsum.photos/800/1000);
+        }
+        @media screen and (max-width: 425px) {
+            background-image: linear-gradient( 45deg, rgba(60,127,212, .91) 0%, rgba(36,204,250, .91) 100%), url(https://picsum.photos/450/600);
+        }
+    }
+}
+
+.post {
+    $space: 20px;
+
+    flex: 0 1 370px;
+    height: 520px;
+    background-color: $secondary-color;
+    position: relative;
+
+    @media screen and (min-width: 425px) and (max-width: 575px) {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    & + & {
+        margin-left: 10px;
+    }
+
+    @include hover {
+        box-shadow: 0 0 10px $border-width $body-color;
+    }
+
+    &__link {
+        height: 100%;
+        display: block;
+        padding: $space;
+    }
+
+    &__img-wrap {
+        position: relative;
+        height: 240px;
+        overflow: hidden;
+        margin: -1 * $space -1 * $space $space;
+    }
+
+    &__img {
+        @include posA(50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        line-height: inherit;
+        max-height: 71px;
+        overflow: hidden;
+        @include clamp;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        max-height: 58px;
+        overflow: hidden;
+        @include clamp;
+    }
+
+    &__author {
+        @include posA($left: $space, $bottom: $space);
+    }
+}
+
+.author {
+    padding-right: 10px;
+    @include flex;
+    @include hover {
+        background-color: rgba($primary-color, .3);
+        border-radius: 30px 0 0 30px;
+    }
+
+    &__img-wrap {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    &__author-img {
+        @include posA(50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    &__about {
+        margin-left: 20px;
+    }
+
+    &__name {
+        max-width: 175px;
+        max-height: 22px;
+        overflow: hidden;
+        @include clamp($clamp: 1);
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            max-width: 250px;
+        }
+        @media screen and (min-width: 1170px) {
+            max-width: 270px;
+        }
+    }
+
+    &__time {
+        @include font($subtitle-ff, 1.4rem, $primary-color);
+    }
+}
+
+.swiper {
+    position: relative;
+}
+
+.swiper-container-horiz {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 70px;
+
+
+    .swiper-pagination-bullets {
+        bottom: 0px;
+
+        .swiper-pagination-bullet {
+            margin-left: 5px;
+            margin-right: 5px;
+
+            @media screen and (min-width: 768px) {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.button-prev, .button-next {
+    cursor: pointer;
+    outline: none;
+    font-size: 0;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    &:hover svg {
+        fill: $primary-color;
+        @include tr;
+    }
+    svg {
+        @include tr;
+        width: 45px;
+        height: 45px;
+        fill: $secondary-color;
+    }
+
+    @media screen and (min-width: 1320px) {
+        display: block;
+    }
+}
+
+.button-prev {
+    left: -65px;
+    @media screen and (min-width: 1440px) {
+        left: -100px;
+    }
+}
+.button-next {
+    right: -65px;
+    @media screen and (min-width: 1440px) {
+        right: -100px;
+    }
+}

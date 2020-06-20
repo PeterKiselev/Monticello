@@ -1,0 +1,183 @@
+.section {
+    &--footer {
+        min-height: auto;
+        background-position: center;
+
+        @media screen and (min-width: 992px) {
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+
+        background-image: $gradient, linear-gradient( to bottom, rgba(255,255,255, .5) 0%, rgba(255,255,255, .9) 100%), url(../img/footer-bg.jpg);
+        @media screen and (max-width: 1024px) {
+            background-image: $gradient, url(https://picsum.photos/1280/720);
+        }
+        @media screen and (max-width: 768px) {
+            background-image: $gradient, url(https://picsum.photos/800/1000);
+        }
+        @media screen and (max-width: 425px) {
+            background-image: none;
+        }
+
+        &__container {
+            max-width: 830px;
+            padding: 0 15px;
+
+            @media screen and (min-width: 425px) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
+.contact-wrap {
+    width: 100%;
+    margin: 0 auto 0;
+    padding: 30px 20px;
+    background: url(../img/city.png), $secondary-color;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: $title-color;
+
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+        width: 80%;
+    }
+
+    @media screen and (min-width: 992px) {
+        margin-top: -500px;
+        padding: 60px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+        padding-top: 30px;
+    }
+}
+
+.contact {
+    @include flex;
+    font-family: $subtitle-ff;
+    flex-direction: column;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    &__address, &__form {
+        flex-basis: 45%;
+    }
+}
+
+.address {
+    font-style: normal;
+
+    &__link {
+        display: block;
+        @include tr;
+        @include hover {
+            color: $primary-color;
+            i {
+                color: $primary-color;
+            }
+        }
+
+        &--disabled:hover {
+            color: inherit;
+        }
+
+        & + & {
+            margin-top: 30px;
+
+            @media screen and (min-width: 768px) {
+                margin-top: 40px;
+            }
+        }
+
+        i, &--disabled:hover i {
+            color: $contact-primary-color;
+        }
+        i {
+            margin-right: 20px;
+            @include tr;
+        }
+    }
+}
+
+.form {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    }
+
+    &__field {
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        border: none;
+        width: 100%;
+        opacity: .5;
+        padding-bottom: 20px;
+        border-bottom: $border-width solid $title-color;
+        @include tr;
+
+        @media screen and (min-width: 425px) and (max-width: 767px) {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:focus {
+            outline: none;
+            opacity: 1;
+        }
+    }
+
+    &__btn {
+        align-self: center;
+        max-width: 140px;
+
+        @media screen and (min-width: 768px) {
+            align-self: flex-end;
+        }
+    }
+}
+
+.copy {
+    text-align: center;
+    @include font($subtitle-ff, 1.4rem, $secondary-color);
+
+    @media screen and (min-width: 992px) {
+        text-align: left;
+    }
+
+    &__link {
+        @include tr;
+        @include hover {
+            color: $primary-color;
+            text-shadow: $border-width * 2 0 $border-width $body-color;
+        }
+    }
+
+    &__text {
+        & + & {
+            border-left: $border-width solid $secondary-color;
+        }
+    }
+
+    &__text:first-child {
+        padding-right: 20px;
+    }
+
+    &__text:not(:first-child) {
+        padding-left: 20px;
+    }
+}
+

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monticello</title>
+    <link rel="shortcut icon" href="img/Logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/260e80cfa3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <svg width="241" height="54">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link menu__link--active">About Us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#projects" class="menu__link">projects</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#news" class="menu__link">news</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">contact</a>
+                    </li>
+                </ul>
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://twitter.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="toggler" onclick="toggleMenu(event)">
+                    <span></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section section--cover section--bg">
+             <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="cover">
+                            <picture class="picture bg">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="img/header-bg.jpg" alt="about monticello">
+                            </picture>
+                            <div class="container">
+                                <div class="cover__head">
+                                    <h1 class="title title--main title--white">Simple & mordern</h1>
+                                    <p class="subtitle subtitle--main">We make the world's beautiful every day</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="cover">
+                            <picture class="picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="https://picsum.photos/1920/1080" alt="about monticello">
+                            </picture>
+                            <div class="container">
+                                <div class="cover__head">
+                                    <h1 class="title title--main title--white">Lorem, ipsum dolor.</h1>
+                                    <p class="subtitle subtitle--main">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="cover">
+                            <picture class="picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="https://picsum.photos/1920/1200" alt="about monticello">
+                            </picture>
+                            <div class="container">
+                                <div class="cover__head">
+                                    <h1 class="title title--main title--white">Lorem, ipsum.</h1>
+                                    <p class="subtitle subtitle--main">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="cover">
+                            <picture class="picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="https://picsum.photos/2048/1152" alt="about monticello">
+                            </picture>
+                            <div class="container">
+                                <div class="cover__head">
+                                    <h1 class="title title--main title--white">Lorem</h1>
+                                    <p class="subtitle subtitle--main">Lorem, ipsum dolor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="cover">
+                            <picture class="picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="https://picsum.photos/2560/1080" alt="about monticello">
+                            </picture>
+                            <div class="container">
+                                <div class="cover__head">
+                                    <h1 class="title title--main title--white">Lorem, ipsum.</h1>
+                                    <p class="subtitle subtitle--main">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <a href="#projects" class="scroll">
+                <svg width="1000" height="1000">
+                    <use xlink:href="#arrow-down"></use>
+                </svg>
+            </a>
+        </section>
+        <div id="arrowTop" hidden>
+            <i class="fas fa-angle-double-up"></i>
+        </div>
+        <section class="section section--about" id="about">
+            <div class="container">
+                 <h2 class="title section__title">what we do</h2>
+                <div class="about">
+                    <picture class="about__img-wrap">
+                        <source srcset="https://picsum.photos/320/480" media="(max-width: 576px)">
+                        <source srcset="https://picsum.photos/800/600" media="(max-width: 767px)">
+                        <img src="img/about-img-1.jpg" class="about__img" alt="trade center">
+                    </picture>
+                    <div class="about__description">
+                        <div class="about__subtitle subtitle">One World</div>
+                        <h3 class="title about__title">Trade Center</h3>
+                        <p class="about__text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
+                        <a href="#" class="btn about__btn">more details</a>
+                        <a href="#map" class="about__address-link" onclick="getGeocode(this.innerText)">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            New York City, United States - 1776 feet
+                        </a>
+                    </div>   
+                </div>
+                <div class="about about--reverse">
+                    <picture class="about__img-wrap">
+                        <source srcset="https://picsum.photos/360/640" media="(max-width: 576px)">
+                        <source srcset="https://picsum.photos/960/544" media="(max-width: 767px)">
+                        <img src="img/about-img-2.jpg" class="about__img about__img--shadow-right" alt="commerce center">
+                    </picture>
+                    <div class="about__description">
+                        <div class="about__subtitle subtitle">International</div>
+                        <h3 class="title about__title">Commerce Centre</h3>
+                        <p class="about__text">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
+                        <a href="#" class="btn about__btn">more details</a>
+                        <a href="#map" class="about__address-link" onclick="getGeocode(this.innerText)">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            Hong Kong, ICC
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--news section--bg" id="news">
+            <div class="container">
+                <h2 class="title section__title title--white title--line">latest news</h2>
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-container-horiz">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="post">
+                                    <a href="#" class="post__link">
+                                        <div class="post__img-wrap">
+                                            <img src="img/post-img-1.jpg" alt="post 1" class="post__img">
+                                        </div>
+                                        <h4 class="title post__title">See The Unmatched Beauty Of The Great.</h4>
+                                        <p class="post__text">Free directories: directories are perfect for customers that are... searching for</p>
+                                    </a>
+                                    <a href="#" class="post__author author">
+                                        <div class="author__img-wrap">
+                                            <img class="author__img" src="img/post-author-img-1.jpg" alt="author img 1">
+                                        </div>
+                                        <div class="author__about">
+                                            <div class="author__name subtitle">Isaac Dunn</div>
+                                            <time class="author__time" datetime="2017-02-09 19:40:00">09 Feb 2017</time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="post">
+                                    <a href="#" class="post__link">
+                                        <div class="post__img-wrap">
+                                            <img src="img/post-img-2.jpg" alt="post 2" class="post__img">
+                                        </div>
+                                        <h4 class="title post__title">Effective Advertising Pointers.</h4>
+                                        <p class="post__text">Having a home based business is a wonderful asset to your life...</p>
+                                    </a>
+                                    <a href="#" class="post__author author">
+                                        <div class="author__img-wrap">
+                                            <img class="author__img" src="img/post-author-img-2.jpg" alt="author img 2">
+                                        </div>
+                                        <div class="author__about">
+                                            <div class="author__name subtitle">Dominic Freeman</div>
+                                            <time class="author__time" datetime="2017-04-24 19:40:00">24 Apr 2017</time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="post">
+                                    <a href="#" class="post__link">
+                                        <div class="post__img-wrap">
+                                            <img src="img/post-img-3.jpg" alt="post 3" class="post__img">
+                                        </div>
+                                        <h4 class="title post__title">Hypnotize Yourself Into The Ghost.</h4>
+                                        <p class="post__text">There are many things that are important to catalog design....</p>
+                                    </a>
+                                    <a href="#" class="post__author author">
+                                        <div class="author__img-wrap">
+                                            <img class="author__img" src="img/post-author-img-3.jpg" alt="author img 3">
+                                        </div>
+                                        <div class="author__about">
+                                            <div class="author__name subtitle">Alice Ward</div>
+                                            <time class="author__time" datetime="2017-12-30 19:40:00">30 Dec 2017</time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="post">
+                                    <a href="#" class="post__link">
+                                        <div class="post__img-wrap">
+                                            <img src="img/post-img-1.jpg" alt="post 1" class="post__img">
+                                        </div>
+                                        <h4 class="title post__title">See The Unmatched Beauty Of The Great.</h4>
+                                        <p class="post__text">Free directories: directories are perfect for customers that are... searching for</p>
+                                    </a>
+                                    <a href="#" class="post__author author">
+                                        <div class="author__img-wrap">
+                                            <img class="author__img" src="img/post-author-img-1.jpg" alt="author img 1">
+                                        </div>
+                                        <div class="author__about">
+                                            <div class="author__name subtitle">Isaac Dunn</div>
+                                            <time class="author__time" datetime="2017-02-09 19:40:00">09 Feb 2017</time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="post">
+                                    <a href="#" class="post__link">
+                                        <div class="post__img-wrap">
+                                            <img src="img/post-img-2.jpg" alt="post 2" class="post__img">
+                                        </div>
+                                        <h4 class="title post__title">Effective Advertising Pointers.</h4>
+                                        <p class="post__text">Having a home based business is a wonderful asset to your life...</p>
+                                    </a>
+                                    <a href="#" class="post__author author">
+                                        <div class="author__img-wrap">
+                                            <img class="author__img" src="img/post-author-img-2.jpg" alt="author img 2">
+                                        </div>
+                                        <div class="author__about">
+                                            <div class="author__name subtitle">Dominic Freeman</div>
+                                            <time class="author__time" datetime="2017-04-24 19:40:00">24 Apr 2017</time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="post">
+                                    <a href="#" class="post__link">
+                                        <div class="post__img-wrap">
+                                            <img src="img/post-img-3.jpg" alt="post 3" class="post__img">
+                                        </div>
+                                        <h4 class="title post__title">Hypnotize Yourself Into The Ghost.</h4>
+                                        <p class="post__text">There are many things that are important to catalog design....</p>
+                                    </a>
+                                    <a href="#" class="post__author author">
+                                        <div class="author__img-wrap">
+                                            <img class="author__img" src="img/post-author-img-3.jpg" alt="author img 3">
+                                        </div>
+                                        <div class="author__about">
+                                            <div class="author__name subtitle">Alice Ward</div>
+                                            <time class="author__time" datetime="2017-12-30 19:40:00">30 Dec 2017</time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="button-next">
+                        <svg width="32" height="32">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </div>
+                    <div class="button-prev">
+                        <svg width="32" height="32">
+                            <use xlink:href="#arrow-prev"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--projects" id="projects">
+            <div class="container">
+                <h2 class="section__title title title--line">gallery</h2>
+                <div class="projects">
+                    <a href="#" class="projects__link projects__link--large project" target="_blank" rel="noopener noreferrer">
+                        <picture class="project__img-wrap">
+                            <source srcset="https://picsum.photos/576/480" media="(max-width: 576px)">
+                            <img class="project__img" src="img/projects-img-1.jpg" alt="project 1">
+                        </picture>
+                        <div class="project__overview">
+                            <img src="img/360.png" alt="overview">
+                        </div>
+                    </a>
+                    <a href="#" class="projects__link project" target="_blank" rel="noopener noreferrer">
+                        <picture class="project__img-wrap">
+                            <source srcset="https://picsum.photos/480/320" media="(max-width: 576px)">
+                            <img class="project__img" src="img/projects-img-2.jpg" alt="project 2">
+                        </picture>
+                    </a>
+                    <a href="#" class="projects__link project" target="_blank" rel="noopener noreferrer">
+                        <picture class="project__img-wrap">
+                            <source srcset="https://picsum.photos/480/320" media="(max-width: 576px)">
+                            <img class="project__img" src="img/projects-img-3.jpg" alt="project 3">
+                        </picture>
+                    </a>
+                    <a href="#" class="projects__link projects__link--medium project" target="_blank" rel="noopener noreferrer">
+                        <picture class="project__img-wrap">
+                            <source srcset="https://picsum.photos/480/320" media="(max-width: 576px)">
+                            <img class="project__img" src="img/projects-img-4.jpg" alt="project 4">
+                        </picture>
+                    </a>
+                    <a href="#" class="projects__link projects__link--medium project" target="_blank" rel="noopener noreferrer">
+                        <picture class="project__img-wrap">
+                            <source srcset="https://picsum.photos/480/320" media="(max-width: 576px)">
+                            <img class="project__img" src="img/projects-img-5.jpg" alt="project 5">
+                        </picture>
+                    </a>
+                </div>
+                <a href="#" class="btn section__btn">see more</a>
+            </div>
+        </section>
+        <section class="section section--map" id="map">
+            <h2 class="visually-hidden">Map</h2>
+        </section>
+    </main>
+    <footer class="section section--bg section--footer">
+        <div class="container section--footer__container">
+            <div class="contact-wrap" id="contact">
+                <h2 class="contact-wrap__title title title--line">get in touch</h2>
+                <div class="contact">
+                    <address class="contact__address address">
+                        <a href="#map" class="address__link" id="link" onclick="getGeocode(this.innerText)">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            Northern Beaches Council
+                        </a>
+                        <a href="tel:+001356-868-2454" class="address__link">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            +001 356-868-2454
+                        </a>
+                        <a href="mailto:gahuy93@gmail.com" class="address__link">
+                            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                            gahuy93@gmail.com
+                        </a>
+                        <p class="address__link address__link--disabled">
+                            <i class="far fa-clock" aria-hidden="true"></i>
+                            From 07:05AM to 19:30PM
+                        </p>
+                    </address>
+                    <form action="#" class="form contact__form" name="form" id="form" method="post">
+                        <input type="text" name="name" class="form__field" minlength="3" maxlength="20" required placeholder="Name">
+                        <input type="email" name="email" class="form__field" maxlength="20" required placeholder="Email">
+                        <button class="btn form__btn" type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <svg width="241" height="54">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://twitter.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copy">
+                <span class="copy__text">Copyrights © 2017 Monticello</span>
+                <span class="copy__text">Made with
+                    <i class="fas fa-heart"></i>
+                    by
+                    <a href="#" class="copy__link" target="_blank" rel="noopener noreferrer">Ga Huy</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <svg style="display: none;">
+        <symbol id="logo" viewBox="0 0 241 54">
+            <path d="M238.639,43.629 L237.180,43.629 L237.180,45.768 L236.501,45.768 L236.501,39.707 L238.751,39.707 C240.107,39.707 241.000,40.434 241.000,41.629 L241.000,41.646 C241.000,42.954 239.918,43.629 238.639,43.629 ZM240.313,41.655 C240.313,40.788 239.669,40.338 238.699,40.338 L237.180,40.338 L237.180,43.005 L238.665,43.005 C239.660,43.005 240.313,42.468 240.313,41.671 L240.313,41.655 ZM231.447,30.218 C225.988,30.218 221.945,26.034 221.945,20.811 L221.945,20.759 C221.945,15.535 226.039,11.300 231.498,11.300 C236.957,11.300 241.000,15.483 241.000,20.707 L241.000,20.759 C241.000,25.982 236.905,30.218 231.447,30.218 ZM235.996,20.759 C235.996,18.134 234.151,15.847 231.447,15.847 C228.768,15.847 226.974,18.082 226.974,20.707 L226.974,20.759 C226.974,23.384 228.818,25.671 231.498,25.671 C234.202,25.671 235.996,23.436 235.996,20.811 L235.996,20.759 ZM218.598,45.871 C216.769,45.871 215.542,44.425 215.542,42.754 L215.542,42.737 C215.542,41.066 216.786,39.602 218.615,39.602 C220.444,39.602 221.671,41.049 221.671,42.720 L221.671,42.737 C221.671,44.408 220.426,45.871 218.598,45.871 ZM220.967,42.737 C220.967,41.360 219.972,40.235 218.598,40.235 C217.224,40.235 216.245,41.343 216.245,42.720 L216.245,42.737 C216.245,44.113 217.241,45.239 218.615,45.239 C219.988,45.239 220.967,44.131 220.967,42.754 L220.967,42.737 ZM205.464,11.664 L210.366,11.664 L210.366,25.437 L218.934,25.437 L218.934,29.854 L205.464,29.854 L205.464,11.664 ZM198.780,45.871 C196.892,45.871 195.725,44.486 195.725,42.754 L195.725,42.737 C195.725,41.074 196.935,39.602 198.738,39.602 C199.751,39.602 200.378,39.896 200.978,40.408 L200.541,40.927 C200.077,40.521 199.562,40.235 198.713,40.235 C197.381,40.235 196.428,41.369 196.428,42.720 L196.428,42.737 C196.428,44.182 197.347,45.257 198.807,45.257 C199.494,45.257 200.129,44.988 200.541,44.651 L200.541,43.143 L198.713,43.143 L198.713,42.529 L201.193,42.529 L201.193,44.945 C200.635,45.447 199.794,45.871 198.780,45.871 ZM187.365,11.664 L192.268,11.664 L192.268,25.437 L200.835,25.437 L200.835,29.854 L187.365,29.854 L187.365,11.664 ZM181.224,39.707 L181.903,39.707 L181.903,45.135 L185.285,45.135 L185.285,45.768 L181.224,45.768 L181.224,39.707 ZM167.977,11.664 L182.206,11.664 L182.206,15.951 L172.830,15.951 L172.830,18.706 L181.321,18.706 L181.321,22.682 L172.830,22.682 L172.830,25.566 L182.332,25.566 L182.332,29.854 L167.977,29.854 L167.977,11.664 ZM161.440,40.798 L161.440,45.768 L160.779,45.768 L160.779,39.707 L161.415,39.707 L165.201,44.564 L165.201,39.707 L165.862,39.707 L165.862,45.768 L165.321,45.768 L161.440,40.798 ZM155.666,25.618 C157.511,25.618 158.597,24.735 159.659,23.410 L163.349,26.112 C161.681,28.477 159.431,30.218 155.514,30.218 C150.460,30.218 146.391,26.242 146.391,20.811 L146.391,20.759 C146.391,15.458 150.359,11.300 155.716,11.300 C159.330,11.300 161.655,12.859 163.222,15.094 L159.532,18.030 C158.522,16.731 157.359,15.899 155.666,15.899 C153.190,15.899 151.446,18.056 151.446,20.707 L151.446,20.759 C151.446,23.488 153.190,25.618 155.666,25.618 ZM144.167,39.707 L144.844,39.707 L144.844,45.768 L144.167,45.768 L144.167,39.707 ZM136.305,11.664 L141.234,11.664 L141.234,29.854 L136.305,29.854 L136.305,11.664 ZM139.396,40.338 L137.378,40.338 L137.378,45.768 L136.692,45.768 L136.692,40.338 L134.674,40.338 L134.674,39.707 L139.396,39.707 L139.396,40.338 ZM126.218,29.854 L121.315,29.854 L121.315,16.081 L116.008,16.081 L116.008,11.664 L131.525,11.664 L131.525,16.081 L126.218,16.081 L126.218,29.854 ZM119.854,44.564 L119.854,39.707 L120.515,39.707 L120.515,45.768 L119.974,45.768 L116.093,40.798 L116.093,45.768 L115.432,45.768 L115.432,39.707 L116.068,39.707 L119.854,44.564 ZM99.476,19.875 L99.476,29.854 L94.624,29.854 L94.624,11.664 L99.198,11.664 L106.476,21.279 L106.476,11.664 L111.328,11.664 L111.328,29.854 L107.032,29.854 L99.476,19.875 ZM89.866,45.768 L89.180,45.768 L89.180,40.338 L87.162,40.338 L87.162,39.707 L91.884,39.707 L91.884,40.338 L89.866,40.338 L89.866,45.768 ZM79.986,30.218 C74.527,30.218 70.484,26.034 70.484,20.811 L70.484,20.759 C70.484,15.535 74.578,11.300 80.037,11.300 C85.496,11.300 89.539,15.483 89.539,20.707 L89.539,20.759 C89.539,25.982 85.444,30.218 79.986,30.218 ZM84.535,20.759 C84.535,18.134 82.690,15.847 79.986,15.847 C77.307,15.847 75.513,18.082 75.513,20.707 L75.513,20.759 C75.513,23.384 77.358,25.671 80.037,25.671 C82.741,25.671 84.535,23.436 84.535,20.811 L84.535,20.759 ZM68.047,53.769 L67.676,53.989 L36.367,0.225 L36.737,0.006 L46.622,16.981 L46.622,11.664 L51.803,11.664 L56.023,18.706 L60.243,11.664 L65.424,11.664 L65.424,29.854 L60.547,29.854 L60.547,19.407 L56.023,26.528 L55.922,26.528 L51.424,19.459 L51.424,25.225 L68.047,53.769 ZM30.983,12.958 L51.538,48.148 L22.919,48.400 L25.241,42.791 L41.890,42.644 L31.080,24.136 L17.439,48.449 L-0.000,48.602 L25.747,3.835 L28.976,9.361 L9.671,42.928 L14.191,42.888 L30.983,12.958 ZM72.172,45.768 L71.494,45.768 L71.494,39.707 L72.172,39.707 L72.172,45.768 ZM81.791,44.564 L81.791,39.707 L82.452,39.707 L82.452,45.768 L81.911,45.768 L78.030,40.798 L78.030,45.768 L77.369,45.768 L77.369,39.707 L78.005,39.707 L81.791,44.564 ZM100.939,40.330 L97.273,40.330 L97.273,42.399 L100.552,42.399 L100.552,43.022 L97.273,43.022 L97.273,45.143 L100.981,45.143 L100.981,45.768 L96.594,45.768 L96.594,39.707 L100.939,39.707 L100.939,40.330 ZM110.078,40.313 C110.369,40.607 110.541,41.032 110.541,41.507 L110.541,41.524 C110.541,42.529 109.854,43.118 108.911,43.291 L110.756,45.768 L109.923,45.768 L108.181,43.412 L106.464,43.412 L106.464,45.768 L105.785,45.768 L105.785,39.707 L108.370,39.707 C109.108,39.707 109.700,39.932 110.078,40.313 ZM106.464,40.338 L106.464,42.798 L108.309,42.798 C109.211,42.798 109.854,42.330 109.854,41.551 L109.854,41.533 C109.854,40.788 109.288,40.338 108.318,40.338 L106.464,40.338 ZM128.513,39.663 L131.252,45.768 L130.522,45.768 L129.818,44.165 L126.547,44.165 L125.834,45.768 L125.139,45.768 L127.878,39.663 L128.513,39.663 ZM129.552,43.551 L128.187,40.460 L126.813,43.551 L129.552,43.551 ZM152.850,39.602 C154.679,39.602 155.906,41.049 155.906,42.720 L155.906,42.737 C155.906,44.408 154.661,45.871 152.832,45.871 C151.003,45.871 149.776,44.425 149.776,42.754 L149.776,42.737 C149.776,41.066 151.021,39.602 152.850,39.602 ZM150.480,42.737 C150.480,44.113 151.476,45.239 152.850,45.239 C154.223,45.239 155.202,44.131 155.202,42.754 L155.202,42.737 C155.202,41.360 154.206,40.235 152.832,40.235 C151.459,40.235 150.480,41.343 150.480,42.720 L150.480,42.737 ZM173.861,39.663 L176.599,45.768 L175.870,45.768 L175.166,44.165 L171.895,44.165 L171.182,45.768 L170.487,45.768 L173.225,39.663 L173.861,39.663 ZM174.900,43.551 L173.534,40.460 L172.161,43.551 L174.900,43.551 ZM210.454,40.313 C210.746,40.607 210.918,41.032 210.918,41.507 L210.918,41.524 C210.918,42.529 210.231,43.118 209.287,43.291 L211.132,45.768 L210.299,45.768 L208.557,43.412 L206.840,43.412 L206.840,45.768 L206.161,45.768 L206.161,39.707 L208.746,39.707 C209.484,39.707 210.076,39.932 210.454,40.313 ZM206.840,40.338 L206.840,42.798 L208.685,42.798 C209.587,42.798 210.231,42.330 210.231,41.551 L210.231,41.533 C210.231,40.788 209.664,40.338 208.694,40.338 L206.840,40.338 ZM227.129,43.187 C227.129,44.494 227.816,45.230 228.966,45.230 C230.074,45.230 230.778,44.554 230.778,43.230 L230.778,39.707 L231.456,39.707 L231.456,43.179 C231.456,44.945 230.452,45.862 228.949,45.862 C227.464,45.862 226.451,44.945 226.451,43.230 L226.451,39.707 L227.129,39.707 L227.129,43.187 Z"/>
+        </symbol>
+        <symbol id="arrow-down" viewBox="0 0 1000 1000">
+            <path d="M500,665.8l-236-236c-12-12-12-31.3,0-43.3c12-12,31.3-12,43.3,0L500,579.2l192.7-192.7c12-12,31.3-12,43.3,0c12,12,12,31.3,0,43.3L500,665.8z M500,944.1C255.2,944.1,55.9,744.8,55.9,500S255.2,55.9,500,55.9S944.1,255.2,944.1,500S744.8,944.1,500,944.1 M500,990c270.6,0,490-219.4,490-490c0-270.6-219.4-490-490-490C229.4,10,10,229.4,10,500C10,770.6,229.4,990,500,990z"/>
+        </symbol>
+        <symbol id="arrow-prev" viewBox="0 0 32 32">
+            <path d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.163,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z    M16,30.031C8.28,30.031,2,23.72,2,16C2,8.28,8.28,2,16,2c7.72,0,14,6.28,14,14C30,23.72,23.72,30.031,16,30.031z"/>
+            <path d="M19.607,8.302c-0.391-0.394-1.024-0.394-1.414,0l-6.9,6.999c-0.38,0.384-0.381,1.044,0,1.429l6.899,6.999   c0.391,0.394,1.024,0.394,1.414,0c0.391-0.395,0.391-1.034,0-1.429l-6.195-6.285l6.196-6.285   C19.997,9.336,19.997,8.697,19.607,8.302z"/>
+        </symbol>
+        <symbol id="arrow-next" viewBox="0 0 32 32">
+            <path d="M16,0C7.163,0,0,7.163,0,16c0,8.836,7.163,16,16,16c8.836,0,16-7.164,16-16C32,7.163,24.836,0,16,0z M16,30   C8.28,30,2,23.72,2,16C2,8.28,8.28,1.969,16,1.969c7.72,0,14,6.311,14,14.031C30,23.72,23.72,30,16,30z"/>
+            <path d="M13.808,8.271c-0.391-0.394-1.024-0.394-1.414,0c-0.391,0.395-0.391,1.034,0,1.429l6.195,6.285   l-6.196,6.285c-0.391,0.394-0.391,1.034,0,1.429c0.391,0.394,1.024,0.394,1.414,0l6.9-6.999c0.38-0.385,0.381-1.044,0-1.429   L13.808,8.271z"/>
+        </symbol>
+    </svg>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/styles.js"></script>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5KGlM8dvcysQ5tUdpqlm1h8Wl3gxGwvk&callback=initMap"></script>
+
+</body>
+</html>

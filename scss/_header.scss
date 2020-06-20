@@ -1,0 +1,152 @@
+.header {
+    @include posA(0, 0, 0);
+    z-index: 10;
+}
+
+.nav {
+    padding: 50px 0;
+    @include flex($jc: space-evenly);
+    flex-wrap: wrap;
+    color: $secondary-color;
+
+    @media screen and (min-width: 992px) {
+        justify-content: space-between;
+    }
+}
+
+.toggler {
+    z-index: 10;
+    @include flex($jc: center);
+    padding: 10px;
+    width: calc(#{$social-size} + 20px);
+    height: calc(#{$social-size} + 10px);
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+
+    span, span:before, span:after {
+        width: $social-size;
+        height: 3px;
+        background-color: $secondary-color;
+    }
+
+    span {
+        @include tr;
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            @include posA;
+        }
+
+        &:before {
+            top: -15px;
+            transition: transform .3s ease-in, top .3s linear .3s;
+        }
+
+        &:after {
+            top: 15px;
+            transition: transform .3s ease-in, top .3s linear .3s;
+        }
+
+        .menu-opened & {
+            background-color: transparent;
+        }
+
+        .menu-opened &:before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: top .3s linear, transform .3s ease-in .3s;
+        }
+
+        .menu-opened &:after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: top .3s linear, transform .3s ease-in .3s;
+        }
+    }
+}
+
+.menu {
+    will-change: transform;
+    @include posA(0, 0, 0, 0);
+    height: 100vh;
+    @include flex($jc: center);
+    flex-direction: column;
+    background-color: rgba($primary-color, .8);
+    z-index: 5;
+    opacity: 0;
+    transform-origin: calc(100% - 15px) 15px;
+    transform: translate(0, 0) scale(.1);
+    @include tr(.5s);
+    .menu-opened & {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    @media screen and (min-width: 992px) {
+        position: relative;
+        background-color: transparent;
+        flex-direction: row;
+        flex-grow: 1;
+        height: auto;
+        justify-content: space-evenly;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    &__item {
+        .menu-opened & {
+            margin: 20px;
+        }
+    }
+
+    &__link {
+        padding: 1em;
+        position: relative;
+        text-transform: uppercase;
+        @include font(GothamBook, 1.4rem);
+        @include tr;
+        @include hover {
+            text-shadow: $border-width 0 $secondary-color;
+        }
+
+        .menu-opened & {
+            padding: 1em;
+            font-size: 1.3em;
+
+            @media screen and (min-width: 375px) {
+                font-size: 1.5em;
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &--active:before {
+            background-color: $secondary-color;
+        }
+
+        &:hover:before {
+            background-color: $secondary-color;
+            @include tr;
+        }
+
+        &:before {
+            content: '';
+            @include posA(38%, $left: -15%);
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: $border-width solid $secondary-color;
+            @include tr;
+        }
+    }
+}
+
+.menu-opened {
+    overflow: hidden;
+}

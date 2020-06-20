@@ -1,0 +1,49 @@
+@mixin font($ff: inherit, $fz: inherit, $fc: inherit, $fw: 400, $lh: 1.6) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    color: $fc;
+    line-height: $lh;
+}
+
+@mixin posA($top: auto, $right: auto, $left: auto, $bottom: auto) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+}
+
+@mixin tr($dur: .3s) {
+    transition: all $dur ease-in;
+}
+
+@mixin hover() {
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin full() {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex($jc: space-between, $ali: center, $df: flex) {
+    display: $df;
+    justify-content: $jc;
+    align-items: $ali;
+}
+
+@mixin transform($delta_x: -50%, $delta_y: -50%) {
+    transform: translate($delta_x, $delta_y);
+}
+
+@mixin clamp($clamp: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp;
+    -webkit-box-orient: vertical;
+}

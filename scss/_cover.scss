@@ -1,0 +1,86 @@
+.section {
+    &--cover {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+.scroll {
+    display: inline-block;
+    @include posA($bottom: 50px);
+    z-index: 5;
+
+    svg {
+        fill: $secondary-color;
+        width: $social-size;
+        height: $social-size;
+        @include tr;
+
+        @include hover {
+            fill: $primary-color;
+        }
+    }
+    
+}
+
+.cover {
+    width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    @include flex($jc: center);
+
+    &__head {
+        position: relative;
+        z-index: 4;
+        color: $secondary-color;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            max-width: 80%;
+        }
+    }
+}
+
+.swiper-container {
+    z-index: 4;
+}
+
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+    height: 100vh;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    bottom: 20%;
+    left: 50%;
+    @include transform;
+    @include flex;
+    top: auto;
+
+    @media screen and (min-width: 768px) {
+        left: auto;
+        right: 40px;
+        display: block; 
+        top: 50%;
+        bottom: auto;
+    }
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;
+
+    @media screen and (min-width: 768px) {
+        margin: 40px 0;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: $border-width solid $secondary-color;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: $secondary-color;
+}

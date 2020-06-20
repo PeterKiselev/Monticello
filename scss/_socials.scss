@@ -1,0 +1,44 @@
+$social-size: 40px;
+$social-border: 1px;
+
+.social {
+    z-index: 10;
+    order: 1;
+    margin-left: 30px;
+    text-align: center;
+    display: none;
+
+    @media screen and (min-width: 375px) {
+        display: block;
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: 531px) {
+        order: 0;
+        margin-top: 0;
+    }
+
+    &__item {
+        display: inline-block;
+
+        & + & {
+            margin-left: 20px;
+        }
+    }
+    &__link {
+        display: inline-block;
+        color: $secondary-color;
+        font-size: 1.6rem;
+        width: $social-size;
+        height: $social-size;
+        line-height: calc(#{$social-size} - 2 * #{$social-border});
+        border: $social-border solid $secondary-color;
+        border-radius: 50%;
+        @include tr;
+        @include hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+}

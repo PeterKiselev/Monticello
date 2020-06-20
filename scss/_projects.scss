@@ -1,0 +1,97 @@
+.section {
+    &--projects {
+        text-align: center;
+    }
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__link {
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            grid-column: span 2;
+        }
+        @media screen and (min-width: 425px) and (max-width: 575px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+        &--large {
+            @media screen and (min-width: 576px) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            @media screen and (min-width: 768px) {
+                grid-column: span 4;
+            }
+            @media screen and (min-width: 992px) {
+                grid-column: span 2;
+            }
+        }
+        &--medium {
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                grid-column: span 3;
+            }
+        }
+    }
+}
+
+.project {
+    padding-top: 75%;
+    position: relative;
+    display: block;
+    background-color: #ccc;
+    overflow: hidden;
+    font-size: 0;
+    @include tr;
+    @include hover {
+        box-shadow: 0 0 3px 3px rgba($primary-color, .5);
+    }
+    
+    &:hover &__img-wrap {
+        transform: scale(1.2);
+        @include tr;
+    }
+
+    &__img-wrap {
+        @include posA(0, 0, 0, 0);
+        @include full;
+        display: block;
+        @include tr;
+    }
+
+    &__img {
+        @include posA(50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    &:hover &__overview {
+        opacity: 1;
+    }
+
+    &__overview {
+        @include posA(50%, $left: 50%);
+        @include transform;
+        z-index: 2;
+        opacity: 0;
+        @include tr;
+    }
+}
