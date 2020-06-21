@@ -49,6 +49,10 @@
         padding: 60px;
     }
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        margin-top: 0;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 60px;
