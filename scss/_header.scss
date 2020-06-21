@@ -1,6 +1,10 @@
 .header {
     @include posA(0, 0, 0);
     z-index: 10;
+
+    .container {
+        margin: 0 auto;
+    }
 }
 
 .nav {
