@@ -7,7 +7,7 @@
 
 .scroll {
     display: inline-block;
-    @include posA($bottom: 50px);
+    @include posA($bottom: 20px);
     z-index: 5;
 
     svg {
@@ -38,6 +38,11 @@
         @media screen and (min-width: 768px) {
             max-width: 80%;
         }
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            /* IE10+ specific styles go here */ 
+            margin-top: 250px;
+        }
     }
 }
 
@@ -50,7 +55,7 @@
 }
 
 .swiper-container-vertical>.swiper-pagination-bullets {
-    bottom: 20%;
+    bottom: 35%;
     left: 50%;
     @include transform;
     @include flex;

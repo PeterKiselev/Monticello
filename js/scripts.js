@@ -1,11 +1,8 @@
-'use strict';
-
 // dropdown
 function toggleMenu(e) {
     e.preventDefault();
     document.body.classList.toggle('menu-opened');
 }
-
 
 //to top window
 arrowTop.onclick = function() {
