@@ -8,9 +8,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 10px;
+    grid-gap: 10px;
     justify-content: center;
     margin-bottom: 60px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        display: -ms-grid;
+        -ms-grid-rows: 215px 10px 215px;
+    }
 
     @media screen and (min-width: 576px) {
         grid-template-columns: repeat(2, 1fr);
@@ -22,9 +27,47 @@
 
     @media screen and (min-width: 992px) {
         grid-template-columns: repeat(4, 1fr);
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            -ms-grid-columns: 285px 10px 285px 10px 285px 10px 285px;
+        }
     }
 
     &__link {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            &:nth-child(2) {
+                -ms-grid-column: 5;
+                -ms-grid-row: 3;
+                grid-column: 3;
+                -ms-grid-row: 1;
+                grid-row: 1;
+            }
+    
+            &:nth-child(3) {
+                -ms-grid-column: 7;
+                -ms-grid-row: 3;
+                grid-column: 5;
+                -ms-grid-row: 1;
+                grid-row: 1;
+            }
+    
+            &:nth-child(4) {
+                -ms-grid-column: 5;
+                -ms-grid-row: 3;
+                grid-column: 3;
+                -ms-grid-row: 3;
+                grid-row: 1;
+            }
+    
+            &:nth-child(5) {
+                -ms-grid-column: 7;
+                -ms-grid-row: 3;
+                grid-column: 5;
+                -ms-grid-row: 3;
+                grid-row: 1;
+            }
+        }
+        
         @media screen and (min-width: 768px) and (max-width: 991px) {
             grid-column: span 2;
         }
@@ -41,7 +84,15 @@
                 grid-column: span 4;
             }
             @media screen and (min-width: 992px) {
+                grid-row: span 2;
                 grid-column: span 2;
+
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    -ms-grid-row: 1;
+                    -ms-grid-row-span: 3;
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 3;
+                }
             }
         }
         &--medium {
