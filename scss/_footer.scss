@@ -123,14 +123,22 @@
     }
 
     &__field {
-        text-transform: capitalize;
         margin-bottom: 30px;
         border: none;
         width: 100%;
         opacity: .5;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
         border-bottom: $border-width solid $title-color;
         @include tr;
+
+        line-height: 1;
+
+        -webkit-user-select: auto !important;
+        -khtml-user-select: auto !important;
+        -moz-user-select: auto !important;
+        -ms-user-select: auto !important;
+        -o-user-select: auto !important;
+        user-select: auto !important;  
 
         @media screen and (min-width: 425px) and (max-width: 767px) {
             width: 75%;
